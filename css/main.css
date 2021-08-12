@@ -1,0 +1,130 @@
+/* Adaugam varaibile */
+:root {
+  --text-primary: #101d42;
+  --text-secondary: #fbb44c;
+  --text-dark: #2b2922;
+  --text-light: #eaeaea;
+  --text-white: #ffffff;
+
+  --bg-primary: #141e4c;
+  --bg-secondary: #dfedf5;
+  --bg-dark: #101d42;
+  --bg-light: #ffffff;
+
+  --fs-large: 1rem;
+  --fs-medium: 0.875rem;
+  --fs-small: 0.75rem;
+
+  --spacing-xl: 2.625rem;
+  --spacing-large: 1.75rem;
+  --spacing-medium: 1rem;
+  --spacing-small: 0.5rem;
+  --spacing-tiny: 0.25rem;
+}
+
+/* Resetam proprietatile default */
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Adaugam proprietati legate de font */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: var(--fs-medium);
+}
+
+/* Adaugam proprietati legate de culori */
+h1 {
+  color: var(--text-light);
+}
+
+h2 {
+  color: var(--text-primary);
+}
+
+h3 {
+  color: var(--text-secondary);
+}
+
+p {
+  color: var(--text-dark);
+}
+
+/* Stilizeara nav-ului */
+nav {
+  background-color: var(--bg-primary);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo-link {
+  padding: 0;
+}
+
+nav img {
+  width: auto;
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  /* Nu uitam sa punem position:relative pe elementul fata de care pozitionam absolut. */
+  position: relative;
+}
+
+nav a {
+  font-size: var(--fs-small);
+  /* Transformam textul sa contina doar majuscule.*/
+  text-transform: uppercase;
+
+  color: var(--text-light);
+
+  padding: var(--spacing-medium);
+}
+
+nav .arrow-down-icon {
+  font-size: var(--fs-large);
+
+  /* Daca nu specificam top, left, right sau bottom, elementul va fi pozitionat automat, iar in acest caz il pozitioneaza fix cum trebuie. */
+  position: absolute;
+}
